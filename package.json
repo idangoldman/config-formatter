@@ -1,0 +1,28 @@
+{
+  "version": "0.0.1",
+  "name": "config-formatter",
+  "description": "A simple config formatter that converts between JSON, YAML, TOML and INI.",
+  "author": "Idan Goldman",
+  "license": "MIT",
+  "keywords": [
+    "config",
+    "formatter",
+    "json",
+    "yaml",
+    "yml",
+    "ini",
+    "toml"
+  ],
+  "engines": {
+    "node": ">=20.5.0",
+    "pnpm": ">=8.6.10"
+  },
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "config-formatter": "./bin/index.js"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
