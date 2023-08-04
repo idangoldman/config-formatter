@@ -1,12 +1,9 @@
-import fs from 'fs';
 import yaml from 'js-yaml';
 
-export async function readYAML(filePath) {
-  const fileContent = await fs.readFile(filePath, 'utf8');
-  return yaml.safeLoad(fileContent);
+export function readYAML(content) {
+  return yaml.safeLoad(content);
 };
 
-export async function writeYAML(filePath, config) {
-  const yamlContent = yaml.safeDump(config);
-  return await fs.writeFile(filePath, yamlContent, 'utf8');
+export function writeYAML(content) {
+  return yaml.safeDump(content);
 };

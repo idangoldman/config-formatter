@@ -1,12 +1,9 @@
-import fs from 'fs';
 import ini from 'ini';
 
-export async function readINI(filePath) {
-  const fileContent = await fs.readFile(filePath, 'utf8');
-  return ini.parse(fileContent);
+export function readINI(content) {
+  return ini.parse(content);
 }
 
-export async function writeINI(filePath, config) {
-  const iniContent = ini.stringify(config);
-  return await fs.writeFile(filePath, iniContent, 'utf8');
+export function writeINI(content) {
+  return ini.stringify(content);
 }
