@@ -1,7 +1,7 @@
 {
   "version": "0.0.1",
-  "name": "config-formatter",
-  "description": "A simple config formatter that converts between JSON, YAML, TOML and INI.",
+  "name": "stooge",
+  "description": "A simple config formatter that converts between JSON, JSONNET, YAML, TOML and INI.",
   "author": "Idan Goldman",
   "license": "MIT",
   "keywords": [
