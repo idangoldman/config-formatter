@@ -8,6 +8,8 @@
     "config",
     "formatter",
     "json",
+    "jsonl",
+    "jsonnet",
     "yaml",
     "yml",
     "ini",
@@ -20,9 +22,16 @@
   "type": "module",
   "main": "index.js",
   "bin": {
-    "config-formatter": "./bin/index.js"
+    "stooge": "./bin/cli.js"
   },
   "scripts": {
     "start": "node index.js"
+  },
+  "dependencies": {
+    "@hanazuki/node-jsonnet": "^2.1.0",
+    "ini": "^4.1.1",
+    "js-yaml": "^4.1.0",
+    "toml": "^3.0.0",
+    "yaml": "^2.3.1"
   }
 }
