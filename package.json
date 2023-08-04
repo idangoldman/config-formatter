@@ -22,7 +22,7 @@
   "type": "module",
   "main": "index.js",
   "bin": {
-    "stooge": "./bin/cli.js"
+    "stooge": "./bin/index.js"
   },
   "scripts": {
     "start": "node index.js"
