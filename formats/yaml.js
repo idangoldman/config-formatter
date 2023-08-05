@@ -1,9 +1,9 @@
 import yaml from 'js-yaml';
 
-export function readYAML(content) {
+export function parse(content) {
   return yaml.safeLoad(content);
 };
 
-export function writeYAML(content) {
+export function convert(content) {
   return yaml.safeDump(content);
 };
