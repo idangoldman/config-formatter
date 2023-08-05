@@ -17,12 +17,20 @@ describe('CLI > User Interface Testing', () => {
     rimrafSync(`tests/tmp/*.{${fileExtensionsToDelete}}`);
   });
 
-  it('Convert JSON fixture into YAML format', async () => {
-    const command = await $`-i tests/fixtures/fixture.json -o tmp/json-to.yml -f yml`;
-    const expectedFile = readFileSync('tests/fixtures/fixture.yml', 'utf8');
-    const actualFile = readFileSync('tmp/json-to.yml', 'utf8');
-
-    assert.equal(command.exitCode, 0);
-    assert.equal(actualFile, expectedFile);
-  });
+	describe('File Formats Conversion Testing', () => {
+	  for (const fromFormat of SUPPORTED_FORMATS) {
+	    for (const toFormat of SUPPORTED_FORMATS) {
+	      if (fromFormat === toFormat) continue;
+	
+				it('should convert the ${fromFormat.toUpperCase()} fixture into ${toFormat.toUpperCase()} format', async () => {
+					const command = await $`-i tests/fixtures/fixture.${fromFormat} -o tmp/${fromFormat}-to-${toFormat}.${toFormat} -f ${toFormat}`;
+					const expectedFile = readFileSync(`tests/fixtures/fixture.${toFormat}`, 'utf8');
+					const actualFile = readFileSync(`tmp/${fromFormat}-to-${toFormat}.${toFormat}`, 'utf8');
+	
+					assert.equal(command.exitCode, 0);
+					assert.equal(actualFile, expectedFile);
+				});
+	    }
+	  }
+	});
 });
