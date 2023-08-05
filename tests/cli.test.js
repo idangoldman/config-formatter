@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { describe, it, before, after } from 'node:test';
+import { describe, it, before, afterEach } from 'node:test';
 import { readFileSync } from 'node:fs';
 import { $ } from 'zx';
 import { rimrafSync } from 'rimraf'
@@ -12,7 +12,7 @@ describe('CLI > User Interface Testing', () => {
     $.prefix = 'node --no-warnings --experimental-json-modules bin/index.js ';
   });
 
-  after(() => {
+  afterEach(() => {
     const fileExtensionsToDelete = SUPPORTED_FORMATS.toString();
     rimrafSync(`tests/tmp/*.{${fileExtensionsToDelete}}`);
   });
