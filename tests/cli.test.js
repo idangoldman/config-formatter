@@ -4,8 +4,7 @@ import { readFileSync } from 'node:fs';
 import { $ } from 'zx';
 import { rimrafSync } from 'rimraf'
 
-import { SUPPORTED_FORMATS, SUPPORTED_EXTENSIONS } from '../formats/_supported.js';
-
+import { SUPPORTED_FORMATS, SUPPORTED_EXTENSIONS } from '#/formats/_supported.js';
 
 describe('CLI > User Interface Testing', () => {
   before(() => {

@@ -23,8 +23,13 @@
   "bin": {
     "stooge": "./bin/index.js"
   },
+  "imports": {
+    "#": "."
+  },
   "scripts": {
-    "start": "node --no-warnings --experimental-json-modules ./bin/index.js",
+    "help": "pnpm run prefix bin/index.js --help",
+    "prefix": "node --no-warnings --experimental-json-modules",
+    "start": "pnpm run prefix bin/index.js",
     "test": "node --test"
   },
   "dependencies": {

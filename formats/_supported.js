@@ -14,3 +14,9 @@ export const SUPPORTED_FORMATS = [
 ];
 
 export const SUPPORTED_EXTENSIONS = [...SUPPORTED_FORMATS, 'yaml' ];
+
+export const validateFormat = (format) => {
+  if (!SUPPORTED_FORMATS.includes(format)) {
+    throw new Error(`Format "${format}" is not supported.`);
+  }
+}
