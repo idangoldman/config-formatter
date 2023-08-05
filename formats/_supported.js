@@ -1,10 +1,16 @@
-const SUPPORTED_FORMATS = [
+export const SUPPORTED_FORMATS = [
+  // Current formats:
   'ini',
   'json',
   'jsonnet',
-  // 'toml',
-  'yaml',
   'yml',
+
+  // Future formats:
+  // 'csv',
+  // 'json5',
+  // 'jsonc',
+  // 'jsonl',
+  // 'toml',
 ];
 
-export default SUPPORTED_FORMATS;
+export const SUPPORTED_EXTENSIONS = [...SUPPORTED_FORMATS, 'yaml' ];

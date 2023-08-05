@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import { Command } from 'commander';
-import SUPPORTED_FORMATS from '../formats/_supported.js';
+import { SUPPORTED_FORMATS } from '../formats/_supported.js';
 import packageJson from '../package.json' assert { type: "json" };
 
 const program = new Command();
