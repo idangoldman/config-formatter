@@ -2,7 +2,7 @@ const SUPPORTED_FORMATS = [
   'ini',
   'json',
   'jsonnet',
-  'toml',
+  // 'toml',
   'yaml',
   'yml',
 ];
