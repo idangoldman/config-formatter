@@ -1,9 +1,9 @@
 import ini from 'ini';
 
-export function readINI(content) {
+export function parse(content) {
   return ini.parse(content);
 }
 
-export function writeINI(content) {
+export function convert(content) {
   return ini.stringify(content);
 }
