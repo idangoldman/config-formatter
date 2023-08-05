@@ -1,4 +1,4 @@
-const supportedFormats = [
+const SUPPORTED_FORMATS = [
   'init',
   'json',
   'jsonnet',
@@ -7,4 +7,4 @@ const supportedFormats = [
   'yml',
 ];
 
-export default supportedFormats;
+export default SUPPORTED_FORMATS;

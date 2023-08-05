@@ -24,7 +24,8 @@
     "stooge": "./bin/index.js"
   },
   "scripts": {
-    "start": "node --no-warnings --experimental-json-modules ./bin/index.js"
+    "start": "node --no-warnings --experimental-json-modules ./bin/index.js",
+    "test": "node --test"
   },
   "dependencies": {
     "@hanazuki/node-jsonnet": "^2.1.0",
@@ -35,6 +36,7 @@
     "yaml": "^2.3.1"
   },
   "devDependencies": {
+    "rimraf": "^5.0.1",
     "zx": "^7.2.3"
   }
 }
