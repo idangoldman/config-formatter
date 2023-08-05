@@ -1,5 +1,5 @@
 const SUPPORTED_FORMATS = [
-  'init',
+  'ini',
   'json',
   'jsonnet',
   'toml',
