@@ -6,7 +6,7 @@
 import { Command } from 'commander';
 import packageJson from '#/package.json' assert { type: "json" };
 
-import { SUPPORTED_FORMATS } from '#/formats/_supported.js';
+import { SUPPORTED_FORMATS } from '#/lib/supported.js';
 import { performConversion } from '#/lib/conversion.js';
 
 const program = new Command();
