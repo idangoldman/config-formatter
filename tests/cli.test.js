@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs';
 import { $ } from 'zx';
 import { rimrafSync } from 'rimraf'
 
-import { SUPPORTED_FORMATS, SUPPORTED_EXTENSIONS } from '#/lib/supported.js';
+import { SUPPORTED_FORMATS } from '#root/lib/supported.js';
 
 describe('CLI > User Interface Testing', () => {
   before(() => {
@@ -12,7 +12,7 @@ describe('CLI > User Interface Testing', () => {
   });
 
   afterEach(() => {
-    const fileExtensionsToDelete = SUPPORTED_EXTENSIONS.toString();
+    const fileExtensionsToDelete = SUPPORTED_FORMATS.toString();
     rimrafSync(`tests/tmp/*.{${fileExtensionsToDelete}}`);
   });
 

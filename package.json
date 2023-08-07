@@ -24,7 +24,7 @@
     "stooge": "./bin/index.js"
   },
   "imports": {
-    "#": "."
+    "#root/*": "./*"
   },
   "scripts": {
     "help": "pnpm run prefix bin/index.js --help",
