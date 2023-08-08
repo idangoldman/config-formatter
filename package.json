@@ -34,11 +34,11 @@
   },
   "dependencies": {
     "@hanazuki/node-jsonnet": "^2.1.0",
-    "commander": "^11.0.0",
     "ini": "^4.1.1",
     "js-yaml": "^4.1.0",
     "toml": "^3.0.0",
-    "yaml": "^2.3.1"
+    "yaml": "^2.3.1",
+    "yargs": "^17.7.2"
   },
   "devDependencies": {
     "rimraf": "^5.0.1",
