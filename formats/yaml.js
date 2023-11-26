@@ -1,9 +1,9 @@
-import yaml from 'js-yaml';
+import yaml from 'yaml';
 
 export function parse(content) {
-  return yaml.safeLoad(content);
+  return yaml.parse(content);
 };
 
 export function stringify(content) {
-  return yaml.safeDump(content);
+  return yaml.stringify(content);
 };
