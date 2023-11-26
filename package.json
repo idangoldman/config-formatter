@@ -15,8 +15,8 @@
     "toml"
   ],
   "engines": {
-    "node": ">=20.5.0",
-    "pnpm": ">=8.6.10"
+    "node": ">=20.7.0",
+    "pnpm": ">=8.11.0"
   },
   "type": "module",
   "main": "index.js",
@@ -37,11 +37,11 @@
     "ini": "^4.1.1",
     "js-yaml": "^4.1.0",
     "toml": "^3.0.0",
-    "yaml": "^2.3.1",
+    "yaml": "^2.3.4",
     "yargs": "^17.7.2"
   },
   "devDependencies": {
-    "rimraf": "^5.0.1",
+    "rimraf": "^5.0.5",
     "zx": "^7.2.3"
   }
 }
