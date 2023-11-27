@@ -27,23 +27,25 @@
     "#root/*": "./*"
   },
   "scripts": {
+    "clear": "rm -frv node_modules pnpm-lock.yaml",
     "help": "pnpm run prefix bin/index.js --help",
     "prefix": "node --no-warnings --experimental-json-modules",
+    "reinstall": "pnpm run clear && command pnpm install",
     "start": "pnpm run prefix bin/index.js",
-    "test": "node --test"
+    "test": "node --test",
+    "upgrade": "command pnpm update --lockfile-only"
   },
   "dependencies": {
     "@hanazuki/node-jsonnet": "^2.1.0",
     "ini": "^4.1.1",
-    "js-yaml": "^4.1.0",
-    "pino": "^8.16.2",
     "pino-pretty": "^10.2.3",
+    "pino": "^8.16.2",
     "toml": "^3.0.0",
     "yaml": "^2.3.4",
-    "yargs": "^17.7.2"
+    "yargs": "^17.7.2",
+    "zx": "^7.2.3"
   },
   "devDependencies": {
-    "rimraf": "^5.0.5",
-    "zx": "^7.2.3"
+    "rimraf": "^5.0.5"
   }
 }

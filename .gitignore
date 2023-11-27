@@ -24,7 +24,6 @@ pids
 .yarn-integrity
 *.tsbuildinfo
 node_modules/
-pnpm-lock.yaml
 
 # Output of 'npm pack'
 *.tgz
