@@ -5,5 +5,12 @@ export function parse(content) {
 }
 
 export function stringify(content) {
-  return ini.stringify(content);
+  const options = {
+    bracketedArray: true,
+    newline: '\n',
+    sort: false,
+    whitespace: true
+  };
+
+  return ini.stringify(content, options);
 }
