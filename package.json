@@ -38,8 +38,8 @@
   "dependencies": {
     "@hanazuki/node-jsonnet": "^2.1.0",
     "ini": "^4.1.1",
-    "pino-pretty": "^10.2.3",
     "pino": "^8.16.2",
+    "pino-pretty": "^10.2.3",
     "toml": "^3.0.0",
     "yaml": "^2.3.4",
     "yargs": "^17.7.2",

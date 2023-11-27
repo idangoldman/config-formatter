@@ -1,9 +1,11 @@
-import { Jsonnet } from '#roothanazuki/node-jsonnet';
+import { Jsonnet } from '@hanazuki/node-jsonnet';
+import { parse as jsonParse, stringify as jsonStringify } from '#root/formats/json.js'
 
 export function parse(content) {
-  return (new Jsonnet()).evaluateSnippet(content);
+  const jsonnet = new Jsonnet();
+  return jsonnet.evaluateSnippet(content).then(jsonParse);
 }
 
 export function stringify(content) {
-  return JSON.stringify(content, null, 2).replace(/"([^"]+)":/g, '$1:');
+  return jsonStringify(content).replace(/"([^"]+)":/g, '$1:');
 }
