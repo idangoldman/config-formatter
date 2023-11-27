@@ -3,5 +3,5 @@ export function parse(content) {
 };
 
 export function stringify(content) {
-  return JSON.stringify(content, null, 2);
+  return JSON.stringify(content, null, 2) + '\n';
 };
