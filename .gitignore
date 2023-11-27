@@ -54,5 +54,7 @@ ehthumbs.db
 Thumbs.db
 Thumbs.db:encryptable
 packages
-tmp
+
+# TMP folder
+tmp/*
 !tmp/.gitkeep
