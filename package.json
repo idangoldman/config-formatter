@@ -32,11 +32,11 @@
     "prefix": "node --no-warnings --experimental-json-modules",
     "reinstall": "pnpm run clear && pnpm install",
     "start": "pnpm run prefix bin/index.js",
-    "test": "node --test",
+    "test": "node --test './tests/cli.test.js'",
     "upgrade": "pnpm update --lockfile-only"
   },
   "dependencies": {
-    "@hanazuki/node-jsonnet": "^2.1.0",
+    "@cucumber/cucumber": "^10.7.0",
     "ini": "^4.1.2",
     "pino": "^9.1.0",
     "pino-pretty": "^11.0.0",
