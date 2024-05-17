@@ -15,11 +15,11 @@
     "toml"
   ],
   "engines": {
-    "node": ">=20.7.0",
-    "pnpm": ">=8.11.0"
+    "node": "22.1.0",
+    "pnpm": "9.1.1"
   },
   "type": "module",
-  "main": "index.js",
+  "main": "./bin/index.js",
   "bin": {
     "stooge": "./bin/index.js"
   },
@@ -30,22 +30,22 @@
     "clear": "rm -frv node_modules pnpm-lock.yaml",
     "help": "pnpm run prefix bin/index.js --help",
     "prefix": "node --no-warnings --experimental-json-modules",
-    "reinstall": "pnpm run clear && command pnpm install",
+    "reinstall": "pnpm run clear && pnpm install",
     "start": "pnpm run prefix bin/index.js",
     "test": "node --test",
-    "upgrade": "command pnpm update --lockfile-only"
+    "upgrade": "pnpm update --lockfile-only"
   },
   "dependencies": {
     "@hanazuki/node-jsonnet": "^2.1.0",
-    "ini": "^4.1.1",
-    "pino": "^8.16.2",
-    "pino-pretty": "^10.2.3",
+    "ini": "^4.1.2",
+    "pino": "^9.1.0",
+    "pino-pretty": "^11.0.0",
     "toml": "^3.0.0",
-    "yaml": "^2.3.4",
+    "yaml": "^2.4.2",
     "yargs": "^17.7.2",
-    "zx": "^7.2.3"
+    "zx": "^8.1.0"
   },
   "devDependencies": {
-    "rimraf": "^5.0.5"
+    "rimraf": "^5.0.7"
   }
 }
