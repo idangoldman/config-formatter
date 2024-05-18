@@ -1,18 +1,18 @@
-Feature: CLI User Interface Testing
+Feature: CLI User Interface
 
   Background:
-    Given I set the command prefix to "node --no-warnings --experimental-json-modules bin/index.js"
+    Given Stooge command prefix with "node --trace-warnings bin/index.js "
 
-  Scenario Outline: Convert fixture file from <from> to <to> format
-    Given I have a fixture file in <from> format
-    When I convert the fixture file to <to> format
-    Then the converted file should match the fixture file in <to> format
+  Scenario Outline: Convert fixture file from <FROM_FORMAT> to <TO_FORMAT> format
+    Given Fixture file in <FROM_FORMAT> format
+    When Convert the fixture file to <TO_FORMAT> format
+    Then Converted file should match the fixture file in <TO_FORMAT> format
 
     Examples:
-      | from | to   |
-      | ini  | json |
-      | ini  | yaml |
-      | json | ini  |
-      | json | yaml |
-      | yaml | ini  |
-      | yaml | json |
+      | FROM_FORMAT | TO_FORMAT |
+      | ini         | json      |
+      | ini         | yaml      |
+      | json        | ini       |
+      | json        | yaml      |
+      | yaml        | ini       |
+      | yaml        | json      |

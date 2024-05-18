@@ -8,7 +8,7 @@ import { SUPPORTED_FORMATS } from '#root/lib/supported.js';
 
 describe('CLI > User Interface Testing', () => {
   before(() => {
-    $.prefix = 'node --no-warnings --experimental-json-modules bin/index.js ';
+    $.prefix = "node --trace-warnings bin/index.js ";
   });
 
   afterEach(() => {
@@ -31,14 +31,5 @@ describe('CLI > User Interface Testing', () => {
         });
       }
     }
-
-    // it(`Convert JSON fixture file into YAML format file`, async () => {
-    //   const command = await $`-i tests/fixtures/fixture.json -o tmp/json-to.yaml -f yaml`;
-    //   assert.equal(command.exitCode, 0);
-
-    //   const fixtureFile = readFileSync(`tests/fixtures/fixture.yaml`, 'utf8');
-    //   const convertedFile = readFileSync(`tmp/json-to.yaml`, 'utf8');
-    //   assert.equal(fixtureFile, convertedFile);
-    // });
   });
 });
