@@ -8,9 +8,9 @@ importers:
 
   .:
     dependencies:
-      '@cucumber/cucumber':
-        specifier: ^10.7.0
-        version: 10.7.0
+      '@cucumber/pretty-formatter':
+        specifier: ^1.0.1
+        version: 1.0.1(@cucumber/cucumber@10.7.0)(@cucumber/messages@24.1.0)
       ini:
         specifier: ^4.1.2
         version: 4.1.2
@@ -33,6 +33,9 @@ importers:
         specifier: ^8.1.0
         version: 8.1.0
     devDependencies:
+      '@cucumber/cucumber':
+        specifier: ^10.7.0
+        version: 10.7.0
       rimraf:
         specifier: ^5.0.7
         version: 5.0.7
@@ -94,6 +97,12 @@ packages:
   '@cucumber/messages@24.1.0':
     resolution: {integrity: sha512-hxVHiBurORcobhVk80I9+JkaKaNXkW6YwGOEFIh/2aO+apAN+5XJgUUWjng9NwqaQrW1sCFuawLB1AuzmBaNdQ==}
 
+  '@cucumber/pretty-formatter@1.0.1':
+    resolution: {integrity: sha512-A1lU4VVP0aUWdOTmpdzvXOyEYuPtBDI0xYwYJnmoMDplzxMdhcHk86lyyvYDoMoPzzq6OkOE3isuosvUU4X7IQ==}
+    peerDependencies:
+      '@cucumber/cucumber': '>=7.0.0'
+      '@cucumber/messages': '*'
+
   '@cucumber/tag-expressions@6.1.0':
     resolution: {integrity: sha512-+3DwRumrCJG27AtzCIL37A/X+A/gSfxOPLg8pZaruh5SLumsTmpvilwroVWBT2fPzmno/tGXypeK5a7NHU4RzA==}
 
@@ -147,6 +156,10 @@ packages:
   ansi-styles@4.3.0:
     resolution: {integrity: sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg==}
     engines: {node: '>=8'}
+
+  ansi-styles@5.2.0:
+    resolution: {integrity: sha512-Cxwpt2SfTzTtXcfOlzGEee8O+c+MmUgGrNiBcXnuWxuFJHe6a5Hz7qwhwe5OgaSYI0IJvkLqWX1ASG+cJOkEiA==}
+    engines: {node: '>=10'}
 
   ansi-styles@6.2.1:
     resolution: {integrity: sha512-bN798gFfQX+viw3R7yrGWRqnrN2oRkEkUjjl4JNn4E8GxxbjtG3FbrEIIY3l8/hrwUwIeCZvi4QuOTP4MErVug==}
@@ -721,6 +734,10 @@ packages:
   toposort@2.0.2:
     resolution: {integrity: sha512-0a5EOkAUp8D4moMi2W8ZF8jcga7BgZd91O/yabJCFY8az+XSzeGyTKs0Aoo897iV1Nj6guFq8orWDS96z91oGg==}
 
+  ts-dedent@2.2.0:
+    resolution: {integrity: sha512-q5W7tVM71e2xjHZTlgfTDoPF/SmqKG5hddq9SzR49CH2hayqRKJtQ4mtRlSxKaJlR/+9rEM+mnBHf7I2/BQcpQ==}
+    engines: {node: '>=6.10'}
+
   tslib@2.6.2:
     resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
 
@@ -908,6 +925,15 @@ snapshots:
       reflect-metadata: 0.2.1
       uuid: 9.0.1
 
+  '@cucumber/pretty-formatter@1.0.1(@cucumber/cucumber@10.7.0)(@cucumber/messages@24.1.0)':
+    dependencies:
+      '@cucumber/cucumber': 10.7.0
+      '@cucumber/messages': 24.1.0
+      ansi-styles: 5.2.0
+      cli-table3: 0.6.3
+      figures: 3.2.0
+      ts-dedent: 2.2.0
+
   '@cucumber/tag-expressions@6.1.0': {}
 
   '@isaacs/cliui@8.0.2':
@@ -961,6 +987,8 @@ snapshots:
   ansi-styles@4.3.0:
     dependencies:
       color-convert: 2.0.1
+
+  ansi-styles@5.2.0: {}
 
   ansi-styles@6.2.1: {}
 
@@ -1491,6 +1519,8 @@ snapshots:
   toml@3.0.0: {}
 
   toposort@2.0.2: {}
+
+  ts-dedent@2.2.0: {}
 
   tslib@2.6.2: {}
 

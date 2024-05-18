@@ -1,5 +1,5 @@
 import { $ } from "zx";
-import { Given, When, Then } from "cucumber";
+import { Given, When, Then } from "@cucumber/cucumber";
 import { readFileSync } from "fs";
 import assert from "assert";
 
