@@ -1,4 +1,4 @@
-import { readContent, writeContent } from '#root/lib/read-write.js';
+import { readContent, writeContent } from '#root/library/read-write.js';
 
 export async function performConversion(inputFile = '', outputFile = '', format = 'yaml') {
   const contentObject = await readContent(inputFile);

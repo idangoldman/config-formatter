@@ -1,4 +1,4 @@
-import path from 'path';
+import { extname } from 'node:path';
 
 const FORMATS = [
   // Current formats:
@@ -24,7 +24,7 @@ export const SUPPORTED_FORMATS = FORMATS.map(
 export const SUPPORTED_EXTENSIONS = FORMATS.flat();
 
 export function getFileFormatFromFilePath(filePath = '') {
-  const extension = path.extname(filePath)?.replace('.', '').toLowerCase();
+  const extension = extname(filePath)?.replace('.', '').toLowerCase();
 
   if (!extension) {
     throw new Error(`File ${filePath} does not have an extension.`);

@@ -4,9 +4,9 @@ import { readFileSync } from 'node:fs';
 import { $ } from 'zx';
 import { rimrafSync } from 'rimraf'
 
-import { SUPPORTED_FORMATS } from '#root/lib/supported.js';
+import { SUPPORTED_FORMATS } from '#root/library/supported.js';
 
-describe('CLI > User Interface Testing', () => {
+describe('CLI > User Interface', () => {
   before(() => {
     $.prefix = "node --trace-warnings bin/index.js ";
   });
@@ -16,7 +16,7 @@ describe('CLI > User Interface Testing', () => {
     rimrafSync(`tmp/*.{${fileExtensionsToDelete}}`);
   });
 
-  describe('File Formats Conversion Testing', () => {
+  describe('File Formats Conversion', () => {
     for (const fromFormat of SUPPORTED_FORMATS) {
       for (const toFormat of SUPPORTED_FORMATS) {
         if (fromFormat === toFormat) continue;

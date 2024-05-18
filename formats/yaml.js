@@ -1,5 +1,5 @@
 import yaml from 'yaml';
-import replacer from "#root/lib/replacer.js";
+import replacer from "#root/library/replacer.js";
 
 export function parse(content) {
   return yaml.parse(content);

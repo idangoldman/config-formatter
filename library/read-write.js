@@ -1,8 +1,8 @@
 import { access, constants, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 
-import { safeCallback } from '#root/lib/safe-execution.js';
-import { getFileFormatFromFilePath } from '#root/lib/supported.js';
+import { safeCallback } from '#root/library/safe-execution.js';
+import { getFileFormatFromFilePath } from '#root/library/supported.js';
 
 export async function readContent(filePath = '') {
   const absoluteFilePath = path.resolve(filePath);

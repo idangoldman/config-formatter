@@ -1,4 +1,4 @@
-import logger from '#root/lib/logger.js';
+import logger from '#root/library/logger.js';
 
 export async function safeCallback(callback) {
   let error = null;
