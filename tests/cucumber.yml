@@ -6,4 +6,5 @@ default:
   import:
     - tests/steps/**/*.js
   format:
+    - "progress-bar"
     - "@cucumber/pretty-formatter"

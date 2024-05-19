@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@cucumber/pretty-formatter':
-        specifier: ^1.0.1
-        version: 1.0.1(@cucumber/cucumber@10.7.0)(@cucumber/messages@24.1.0)
       ini:
         specifier: ^4.1.2
         version: 4.1.2
@@ -36,6 +33,9 @@ importers:
       '@cucumber/cucumber':
         specifier: ^10.7.0
         version: 10.7.0
+      '@cucumber/pretty-formatter':
+        specifier: ^1.0.1
+        version: 1.0.1(@cucumber/cucumber@10.7.0)(@cucumber/messages@24.1.0)
       rimraf:
         specifier: ^5.0.7
         version: 5.0.7
@@ -206,6 +206,10 @@ packages:
 
   cli-table3@0.6.3:
     resolution: {integrity: sha512-w5Jac5SykAeZJKntOxJCrm63Eg5/4dhMWIcuTbo9rpE+brgaSZo0RuNJZeOyMgsUdhDeojvgyQLmjI+K50ZGyg==}
+    engines: {node: 10.* || >= 12.*}
+
+  cli-table3@0.6.5:
+    resolution: {integrity: sha512-+W/5efTR7y5HRD7gACw9yQjqMVvEMLBHmboM/kPWam+H+Hmyrgjh6YncVKK122YZkXrLudzTuAukUw9FnMf7IQ==}
     engines: {node: 10.* || >= 12.*}
 
   cliui@8.0.1:
@@ -930,7 +934,7 @@ snapshots:
       '@cucumber/cucumber': 10.7.0
       '@cucumber/messages': 24.1.0
       ansi-styles: 5.2.0
-      cli-table3: 0.6.3
+      cli-table3: 0.6.5
       figures: 3.2.0
       ts-dedent: 2.2.0
 
@@ -1037,6 +1041,12 @@ snapshots:
   class-transformer@0.5.1: {}
 
   cli-table3@0.6.3:
+    dependencies:
+      string-width: 4.2.3
+    optionalDependencies:
+      '@colors/colors': 1.5.0
+
+  cli-table3@0.6.5:
     dependencies:
       string-width: 4.2.3
     optionalDependencies:

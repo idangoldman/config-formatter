@@ -3,32 +3,36 @@
 // Examples of usage:
 // stooge -i tests/fixtures/fixture.yaml -o tests/tmp/yaml-to.json -f json
 
-import yargs from 'yargs'
-import { hideBin } from 'yargs/helpers'
+import yargs from "yargs"
+import { hideBin } from "yargs/helpers"
 
-import { SUPPORTED_EXTENSIONS } from '#root/library/supported.js';
-import { performConversion } from '#root/library/conversion.js';
+import {
+  SUPPORTED_EXTENSIONS,
+  SUPPORTED_EXTENSIONS_LIST,
+} from "#root/library/supported.js";
+import { performConversion } from "#root/library/conversion.js";
 
 const argv = yargs(hideBin(process.argv))
-  .usage('Usage: stooge --input <input> --output <output> --format <format>')
-  .option('input', {
-    alias: ['i', 'input'],
-    describe: 'Path to the single or multiple input files to be converted.',
-    type: 'string'
+  .usage("Usage: stooge --input <input> --output <output> --format <format>")
+  .option("input", {
+    alias: ["i", "input"],
+    describe: "Path to the single or multiple input files to be converted.",
+    type: "string",
   })
-  .option('output', {
-    alias: ['o', 'output'],
-    describe: 'Path to the output file or folder for saving the converted content.',
-    type: 'string'
+  .option("output", {
+    alias: ["o", "output"],
+    describe:
+      "Path to the output file or folder for saving the converted content.",
+    type: "string",
   })
-  .option('format', {
-    alias: ['f', 'format'],
+  .option("format", {
+    alias: ["f", "format"],
     choices: SUPPORTED_EXTENSIONS,
-    default: 'yml',
-    describe: `Format seting of the output file, supported formats: ${SUPPORTED_EXTENSIONS.join(', ')}.`,
-    type: 'string',
-  })
-  .argv;
+    default: "yml",
+    describe: `Format seting of the output file, supported formats: ${SUPPORTED_EXTENSIONS_LIST}.`,
+    coerce: (value) => value.toLowerCase(),
+    type: "string",
+  }).argv;
 
 const { input, output, format } = argv;
 await performConversion(input, output, format);

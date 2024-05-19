@@ -1,18 +1,25 @@
 {
-  "version": "0.0.1",
-  "name": "stooge",
-  "description": "A simple config formatter that converts between JSON, JSONNET, YAML, TOML and INI.",
+  "version": "0.1.0",
+  "name": "@idangoldman/stooge",
+  "title": "Stooge",
+  "description": "A simple config formatter that converts between JSON, YAML, and INI.",
   "author": "Idan Goldman",
   "license": "MIT",
+  "homepage": "https://github.com/idangoldman/stooge/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/idangoldman/stooge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/idangoldman/stooge/issues"
+  },
   "keywords": [
     "config",
-    "formatter",
-    "json",
-    "jsonnet",
-    "yaml",
-    "yml",
+    "converter",
     "ini",
-    "toml"
+    "json",
+    "yaml",
+    "yml"
   ],
   "engines": {
     "node": "22.1.0",
@@ -30,17 +37,16 @@
     "clear": "rm -frv node_modules pnpm-lock.yaml",
     "help": "pnpm run prefix bin/index.js --help",
     "prefix": "node --no-warnings --experimental-json-modules",
+    "publish": "pnpm publish --access public",
     "reinstall": "pnpm run clear && pnpm install",
     "start": "pnpm run prefix bin/index.js",
-    "test": "node --test './tests/cli.test.js'",
-    "test:bdd": "cucumber-js --config ./tests/cucumber.yml",
+    "test": "./node_modules/.bin/cucumber-js --config ./tests/cucumber.yml",
     "upgrade": "pnpm update --lockfile-only"
   },
   "dependencies": {
     "ini": "^4.1.2",
     "pino": "^9.1.0",
     "pino-pretty": "^11.0.0",
-    "toml": "^3.0.0",
     "yaml": "^2.4.2",
     "yargs": "^17.7.2",
     "zx": "^8.1.0"

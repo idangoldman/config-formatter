@@ -20,8 +20,8 @@ const FORMATS = [
 export const SUPPORTED_FORMATS = FORMATS.map(
   (format) => Array.isArray(format) ? format[0] : format
 );
-
 export const SUPPORTED_EXTENSIONS = FORMATS.flat();
+export const SUPPORTED_EXTENSIONS_LIST = SUPPORTED_EXTENSIONS.join(",");
 
 export function getFileFormatFromFilePath(filePath = '') {
   const extension = extname(filePath)?.replace('.', '').toLowerCase();
