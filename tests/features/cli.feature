@@ -1,7 +1,7 @@
 Feature: CLI User Interface
 
   Background:
-    Given Stooge command prefix with "node --trace-warnings bin/index.js "
+    Given Stooge command prefix with "pnpm run prefix"
 
   Scenario Outline: Convert fixture file from "<FROM_FORMAT>" to "<TO_FORMAT>" format
     Given Fixture file in "<FROM_FORMAT>" format

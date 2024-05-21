@@ -34,12 +34,12 @@
     "#root/*": "./*"
   },
   "scripts": {
-    "clear": "rm -frv node_modules pnpm-lock.yaml",
-    "help": "pnpm run prefix bin/index.js --help",
-    "prefix": "node --no-warnings --experimental-json-modules",
+    "clear": "rm -frv node_modules pnpm-lock.yaml tmp/**/*",
+    "help": "pnpm run prefix --help",
+    "prefix": "node --trace-warnings bin/index.js",
     "publish": "pnpm publish --access public",
     "reinstall": "pnpm run clear && pnpm install",
-    "start": "pnpm run prefix bin/index.js",
+    "start": "pnpm exec stooge",
     "test": "./node_modules/.bin/cucumber-js --config ./tests/cucumber.yml",
     "upgrade": "pnpm update --lockfile-only"
   },

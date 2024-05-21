@@ -11,7 +11,7 @@ BeforeAll(() => {
 })
 
 Given("Stooge command prefix with {string}", function (commandPrefix) {
-  $.prefix = commandPrefix;
+  $.prefix = commandPrefix + " ";
 });
 
 Given("Fixture file in {string} format", function (fromFormat) {
