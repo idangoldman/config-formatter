@@ -26,7 +26,7 @@
     "pnpm": "9.1.1"
   },
   "type": "module",
-  "main": "./bin/index.js",
+  "main": "./library/api.js",
   "bin": {
     "stooge": "./bin/index.js"
   },

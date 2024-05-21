@@ -21,16 +21,15 @@ const argv = yargs(hideBin(process.argv))
   })
   .option("output", {
     alias: ["o", "output"],
-    describe:
-      "Path to the output file or folder for saving the converted content.",
+    describe: "Path to the output file or folder for saving the converted content.",
     type: "string",
   })
   .option("format", {
     alias: ["f", "format"],
     choices: SUPPORTED_EXTENSIONS,
-    default: "yml",
-    describe: `Format seting of the output file, supported formats: ${SUPPORTED_EXTENSIONS_LIST}.`,
     coerce: (value) => value.toLowerCase(),
+    default: "yml",
+    describe: `Format settings of the output file, supported formats: ${SUPPORTED_EXTENSIONS_LIST}.`,
     type: "string",
   }).argv;
 
