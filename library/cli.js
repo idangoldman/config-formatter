@@ -1,20 +1,19 @@
-import { extension } from "#root/library/contents.js";
-import { convert, dumpFile, loadFile } from "#root/library/api.js";
+import { extensionToFormat, dumpFile, loadFile } from "#root/library/api.js";
 
 export async function execute(
   inputFile = "",
   outputFile = "",
   format = "yaml"
 ) {
-  const fromFormat = extension(inputFile);
-  const toFormat = outputFile.length ? extension(outputFile) : format;
+  const fromFormat = extensionToFormat(inputFile);
+  const toFormat = extensionToFormat(format, outputFile);
 
-  const inputContents = await loadFile(inputFile, fromFormat);
-  const outputContents = convert(inputContents, fromFormat, toFormat);
+  const outputFilePath =
+    outputFile.length > 0
+      ? outputFile
+      : inputFile.replace(new RegExp(`\\.${fromFormat}$`, "i"), `.${toFormat}`);
 
-  const outputFilePath = outputFile.length
-    ? outputFile
-    : `${inputFile.replace(new Regex(`\\.${fromFormat}$`, "i"), toFormat)}`;
+  const contents = await loadFile(inputFile);
 
-  await dumpFile(outputFilePath, outputContents, toFormat);
+  await dumpFile(outputFilePath, contents, toFormat);
 }

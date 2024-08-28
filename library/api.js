@@ -1,11 +1,11 @@
 import { read, write, extension } from "#root/library/contents.js";
 
-export function convert(contents, from, to) {}
+export function convert(contents = "", fromFormat = "", toFormat = "") {}
 
-export function dump(object, format) {}
+export function dump(contents = {}, format = "") {}
 
-export async function dumpFile(filePath, object, format) {}
+export async function dumpFile(filePath = "", contents = {}, format = "") {}
 
 export async function load(contents = "", format = "") {}
 
-export async function loadFile(filePath = "", format = "") {}
+export async function loadFile(filePath = "") {}

@@ -8,5 +8,6 @@ export async function performConversion(
   const contentObject = await readContent(inputFile);
   const outputFilePath =
     outputFile || inputFile.replace(/\.[^.]+$/, `.${format}`);
+
   await writeContent(outputFilePath, contentObject);
 }
