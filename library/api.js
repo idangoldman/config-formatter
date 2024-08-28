@@ -1,6 +1,5 @@
 import { read, write, extension } from "#root/library/contents.js";
 
-
 export function convert(contents, from, to) {}
 
 export function dump(object, format) {}

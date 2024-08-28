@@ -1,5 +1,8 @@
-import { Jsonnet } from '@hanazuki/node-jsonnet';
-import { parse as jsonParse, stringify as jsonStringify } from '#root/formats/json.js'
+import { Jsonnet } from "@hanazuki/node-jsonnet";
+import {
+  parse as jsonParse,
+  stringify as jsonStringify,
+} from "#root/formats/json.js";
 
 export function parse(content) {
   const jsonnet = new Jsonnet();
@@ -7,5 +10,5 @@ export function parse(content) {
 }
 
 export function stringify(content) {
-  return jsonStringify(content).replace(/"([^"]+)":/g, '$1:');
+  return jsonStringify(content).replace(/"([^"]+)":/g, "$1:");
 }

@@ -1,7 +1,11 @@
 import { extension } from "#root/library/contents.js";
 import { convert, dumpFile, loadFile } from "#root/library/api.js";
 
-export async function execute(inputFile = "", outputFile = "", format = "yaml") {
+export async function execute(
+  inputFile = "",
+  outputFile = "",
+  format = "yaml"
+) {
   const fromFormat = extension(inputFile);
   const toFormat = outputFile.length ? extension(outputFile) : format;
 

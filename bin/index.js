@@ -3,8 +3,8 @@
 // Examples of usage:
 // stooge -i tests/fixtures/fixture.yaml -o tests/tmp/yaml-to.json -f json
 
-import yargs from "yargs"
-import { hideBin } from "yargs/helpers"
+import yargs from "yargs";
+import { hideBin } from "yargs/helpers";
 
 import {
   SUPPORTED_EXTENSIONS,
@@ -21,7 +21,8 @@ const argv = yargs(hideBin(process.argv))
   })
   .option("output", {
     alias: ["o", "output"],
-    describe: "Path to the output file or folder for saving the converted content.",
+    describe:
+      "Path to the output file or folder for saving the converted content.",
     type: "string",
   })
   .option("format", {

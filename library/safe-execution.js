@@ -1,4 +1,4 @@
-import logger from '#root/library/logger.js';
+import logger from "#root/library/logger.js";
 
 export async function safeCallback(callback) {
   let error = null;
@@ -10,17 +10,17 @@ export async function safeCallback(callback) {
     error = err;
   } finally {
     if (error) {
-      logger.warn('Error:', error);
+      logger.warn("Error:", error);
     } else {
-      logger.info('Success:', result);
+      logger.info("Success:", result);
     }
 
-    return [ error, result ];
+    return [error, result];
   }
 }
 
 export async function safeReturnBool(callback) {
-  const [ error ] = await safeCallback(callback);
+  const [error] = await safeCallback(callback);
 
   return !error;
 }

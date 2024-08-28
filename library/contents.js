@@ -44,7 +44,9 @@ export function extension(filePath = "") {
   const fileExtension = extname(filePath).replace(".", "").toLowerCase();
 
   if (!SUPPORTED_EXTENSIONS.includes(fileExtension)) {
-    throw new Error(`File "${filePath}" has an unsupported extension, supported extensions: ${SUPPORTED_EXTENSIONS_LIST}.`);
+    throw new Error(
+      `File "${filePath}" has an unsupported extension, supported extensions: ${SUPPORTED_EXTENSIONS_LIST}.`
+    );
   }
 
   return fileExtension;
