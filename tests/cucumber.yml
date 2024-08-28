@@ -1,10 +1,11 @@
 default:
-  parallel: 2
+  # parallel: 2
   verbose: true
   paths:
     - tests/features/**/*.feature
   import:
     - tests/steps/**/*.js
   format:
-    - "progress-bar"
     - "@cucumber/pretty-formatter"
+  formatOptions:
+    colorsEnabled: true
