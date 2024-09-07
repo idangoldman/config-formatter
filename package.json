@@ -32,34 +32,27 @@
     "pnpm": "9.7.1"
   },
   "type": "module",
-  "main": "./library/api.js",
+  "main": "./src/api.js",
   "bin": {
-    "stooge": "./bin/index.js"
+    "stooge": "./bin/stooge.js"
   },
   "imports": {
-    "#root/*": "./*"
+    "#root/*": "./src/*",
+    "#tests/*": "./tests/*"
   },
   "scripts": {
-    "clear": "rm -frv node_modules pnpm-lock.yaml tmp/**/*",
-    "help": "pnpm run prefix --help",
-    "prefix": "node --trace-warnings bin/index.js",
-    "publish": "pnpm publish --access public",
-    "reinstall": "pnpm run clear && pnpm install",
-    "start": "pnpm exec stooge",
-    "test": "./node_modules/.bin/cucumber-js --config ./tests/cucumber.yml",
-    "upgrade": "pnpm update --lockfile-only"
+    "start": "plate run ./bin/stooge.js"
   },
   "dependencies": {
-    "ini": "4.1.3",
-    "pino": "9.3.2",
+    "ini": "5.0.0",
     "pino-pretty": "11.2.2",
-    "yaml": "2.5.0",
+    "pino": "9.4.0",
+    "yaml": "2.5.1",
     "yargs": "17.7.2",
-    "zx": "8.1.4"
+    "zx": "8.1.5"
   },
   "devDependencies": {
-    "@cucumber/cucumber": "10.9.0",
-    "@cucumber/pretty-formatter": "1.0.1",
+    "plate": "file:../blah/plate",
     "rimraf": "6.0.1"
   }
 }

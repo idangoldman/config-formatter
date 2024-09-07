@@ -2,7 +2,7 @@ import { $ } from "zx";
 import { BeforeAll, Given, When, Then } from "@cucumber/cucumber";
 import { readFileSync } from "fs";
 import { rimrafSync } from "rimraf";
-import assert from "assert";
+import assert from "node:assert";
 
 import { SUPPORTED_EXTENSIONS_LIST } from "#root/library/supported.js";
 
@@ -35,9 +35,9 @@ Then(
     const convertedFile = readFileSync(this.outputPath, "utf8");
     const fixtureFile = readFileSync(
       `tests/fixtures/fixture.${toFormat.toLowerCase()}`,
-      "utf8"
+      "utf8",
     );
 
     assert.equal(convertedFile, fixtureFile);
-  }
+  },
 );
