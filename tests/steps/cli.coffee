@@ -20,7 +20,7 @@ When "Convert the fixture file to {string} format", (toFormat) ->
   @toFormat = toFormat.toLowerCase()
   @outputPath = "tmp/#{@fromFormat}-to.#{@toFormat}"
 
-  command = await $"--input=\"#{@fixturePath}\" --output=\"#{@outputPath}\" --format=\"#{@toFormat}\""
+  command = await $"stooge --input=\"#{@fixturePath}\" --output=\"#{@outputPath}\" --format=\"#{@toFormat}\""
 
   assert.equal command.exitCode, 0
 
