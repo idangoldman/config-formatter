@@ -9,8 +9,8 @@ import { hideBin } from "yargs/helpers";
 import {
   SUPPORTED_EXTENSIONS,
   SUPPORTED_EXTENSIONS_LIST,
-} from "#root/library/supported.js";
-import { performConversion } from "#root/library/conversion.js";
+} from "#root/supported.js";
+import { performConversion } from "#root/conversion.js";
 
 const argv = yargs(hideBin(process.argv))
   .usage("Usage: stooge --input <input> --output <output> --format <format>")

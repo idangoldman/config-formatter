@@ -53,7 +53,7 @@ import stooge from "@idangoldman/stooge";
 
 ## TODOs
 
-- [ ] Migration from `#root/library/conversion.js` to `#root/library/cli.js` inside `#root/bin/index.js`
+- [ ] Migration from `#root/conversion.js` to `#root/cli.js` inside `#root/bin/index.js`
 
 ### Testing
 

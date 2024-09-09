@@ -4,7 +4,7 @@ import { readFileSync } from "fs";
 import { rimrafSync } from "rimraf";
 import assert from "node:assert";
 
-import { SUPPORTED_EXTENSIONS_LIST } from "#root/library/supported.js";
+import { SUPPORTED_EXTENSIONS_LIST } from "#root/supported.js";
 
 BeforeAll(() => {
   rimrafSync(`tmp/*.{${SUPPORTED_EXTENSIONS_LIST}}`, { glob: true });
