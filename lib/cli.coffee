@@ -1,6 +1,6 @@
 import { extensionToFormat, dumpFile, loadFile } from "#root/api.js"
 
-export execute = async (
+export execute = (
   inputFile = "",
   outputFile = "",
   format = "yaml"
@@ -9,8 +9,9 @@ export execute = async (
   toFormat = extensionToFormat format, outputFile
 
   outputFilePath = if outputFile.length > 0
-    then outputFile
-    else inputFile.replace new RegExp("\\.#{fromFormat}$", "i"), ".#{toFormat}"
+    outputFile
+  else
+    inputFile.replace new RegExp("\\.#{fromFormat}$", "i"), ".#{toFormat}"
 
   contents = await loadFile inputFile
 

@@ -1,6 +1,6 @@
 import { readContent, writeContent } from "#root/read-write.js"
 
-export performConversion = async (
+export performConversion = (
   inputFile = "",
   outputFile = "",
   format = "yaml"

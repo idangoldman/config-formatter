@@ -1,6 +1,6 @@
 import logger from "#root/logger.js"
 
-export safeCallback = async (callback) ->
+export safeCallback = (callback) ->
   error = null
   result = null
 
@@ -16,7 +16,7 @@ export safeCallback = async (callback) ->
 
     [error, result]
 
-export safeReturnBool = async (callback) ->
+export safeReturnBool = (callback) ->
   [error] = await safeCallback callback
 
   not error

@@ -4,7 +4,7 @@ import { resolve, extname } from "node:path"
 import { safeCallback } from "#root/safe-execution.js"
 import { SUPPORTED_EXTENSIONS, SUPPORTED_EXTENSIONS_LIST } from "#root/supported.js"
 
-export read = async (filePath = "") ->
+export read = (filePath = "") ->
   [error, result] = await safeCallback ->
     absoluteFilePath = resolve filePath
 
@@ -16,7 +16,7 @@ export read = async (filePath = "") ->
 
   result
 
-export write = async (filePath = "", contents = "") ->
+export write = (filePath = "", contents = "") ->
   [error, result] = await safeCallback ->
     absoluteFilePath = resolve filePath
 

@@ -16,11 +16,11 @@ Given "Fixture file in {string} format", (fromFormat) ->
   @fromFormat = fromFormat.toLowerCase()
   @fixturePath = "tests/fixtures/fixture.#{fromFormat}"
 
-When "Convert the fixture file to {string} format", async (toFormat) ->
+When "Convert the fixture file to {string} format", (toFormat) ->
   @toFormat = toFormat.toLowerCase()
   @outputPath = "tmp/#{@fromFormat}-to.#{@toFormat}"
 
-  command = await $`--input="#{@fixturePath}" --output="#{@outputPath}" --format="#{@toFormat}"`
+  command = await $"--input=\"#{@fixturePath}\" --output=\"#{@outputPath}\" --format=\"#{@toFormat}\""
 
   assert.equal command.exitCode, 0
 

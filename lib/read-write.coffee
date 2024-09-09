@@ -4,10 +4,10 @@ import path from "node:path"
 import { safeCallback } from "#root/safe-execution.js"
 import { getFileFormatFromFilePath } from "#root/supported.js"
 
-export readContent = async (filePath = "") ->
+export readContent = (filePath = "") ->
   absoluteFilePath = path.resolve filePath
 
-  [error, result] = await safeCallback async ->
+  [error, result] = await safeCallback ->
     await access absoluteFilePath, constants.F_OK | constants.R_OK
     readContent = await readFile absoluteFilePath, "utf-8"
     await parseContentToObject absoluteFilePath, readContent
@@ -16,10 +16,10 @@ export readContent = async (filePath = "") ->
 
   result
 
-export writeContent = async (filePath = "", contentObject = {}) ->
+export writeContent = (filePath = "", contentObject = {}) ->
   absoluteFilePath = path.resolve filePath
 
-  [error, result] = await safeCallback async ->
+  [error, result] = await safeCallback ->
     stringifiedContent = await parseObjectToContent absoluteFilePath, contentObject
     await writeFile absoluteFilePath, stringifiedContent,
       encoding: "utf-8"
@@ -29,12 +29,12 @@ export writeContent = async (filePath = "", contentObject = {}) ->
 
   result
 
-parseContentToObject = async (filePath = "", content = "") ->
+parseContentToObject = (filePath = "", content = "") ->
   format = getFileFormatFromFilePath filePath
-  { parse } = await import "#root/formats/#{format}.js"
+  { parse } = await import("#root/formats/#{format}.js")
   parse content
 
-parseObjectToContent = async (filePath = "", contentObject = {}) ->
+parseObjectToContent = (filePath = "", contentObject = {}) ->
   format = getFileFormatFromFilePath filePath
-  { stringify } = await import "#root/formats/#{format}.js"
+  { stringify } = await import("#root/formats/#{format}.js")
   stringify contentObject
