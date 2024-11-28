@@ -7,14 +7,21 @@ FORMATS = [
   ["yaml", "yml"]
 
   # Future formats:
-  # 'cson', # CoffeeScript JSON
-  # 'csv',
-  # 'json-ld',
-  # 'json5',
-  # 'jsonc',
-  # 'jsonl',
-  # 'jsonnet',
-  # 'toml',
+  # "cson"
+  # "csv"
+  # "ical"
+  # "icalendar"
+  # "ics"
+  # "json-ld"
+  # "json5"
+  # "jsonc"
+  # "jsonl"
+  # "jsonnet"
+  # "opml"
+  # "toml"
+  # "vcard"
+  # "vcf"
+  # "xml"
 ]
 
 export SUPPORTED_EXTENSIONS = FORMATS.flat()

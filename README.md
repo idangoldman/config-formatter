@@ -39,6 +39,23 @@ stooge \
   --input="path/to/input.json" \
   --output="path/to/output.yml" \
   --schema="path/to/schema.{json,yml}"
+  --dictionary="path/to/dictionary.{json,yml}"
+
+# or
+
+stooge \
+  --format="yaml" \
+  --input="package.json" \
+  --output="package.yml" \
+  --schema="package.schema.yml" \
+  --watch
+
+# or
+
+stooge \
+  --schema="ghost.schema.yml" \
+  --dictionary="markdown_to_ghost" \
+  --sync
 ```
 
 for more information, run `stooge --help`.
